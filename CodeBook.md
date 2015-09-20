@@ -21,13 +21,26 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 A full description of the original data is available at: 
 
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+The dataset was downloaded to the local directory "~/R/Getting&Cleaning_Data/Project/UCI HAR Dataset/" from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
-The data used are mean and standard deviation of each variable measured.
+The raw sampled data (../Inertial Signals) was not used for the project, only the features (based on the raw data)  are used. The data was also split into training and testing sets. Each set contains 
+X -- feature measurements
+y -- integers indicating the activity labels for each row of X
+subject -- integers indicating the subjects (users) for each measurement in X
+
+
+features.txt contains description of the list of features
+
+
+activity_labels.txt is used to correlate integer labels for acitivity and the respective descriptive names.
+
+The data being processed are mean and standard deviation of each feature that's measured decided based on features.txt
+
 
 ##Creating the tidy datafile
 
 ###Guide to create the tidy data file
-Description on how to create the tidy data file (1. download the data, ...)/
+The training and test sets were combined for each data frame, followed by subsetting, merging, and aggregation for the tidy data file. Detailed steps can be found at https://github.com/danielle128/R-cleaningData/blob/master/ReadMe.md
 
 ###Cleaning of the data
 The subject's name was transformed into an Subject (unique integers) (1-30), the type of activity was transformed into a factor Activity (6 levels: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING), all measurement data was transformed into numerical vectors after taking the average for each subject doing each activity.
