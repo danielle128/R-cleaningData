@@ -22,9 +22,9 @@ activity_labels.txt is used to correlate integer labels for acitivity and the re
 The data being processed are mean and standard deviation of each feature that's measured decided based on features.txt
 
 ## Data-loading
-*Based on wether the feature name contains the word "mean()" or "std()", selected columns of X were loaded from the training (7352 rows) and test (2947 rows) datasets. y and subject were fully loaded from the training and test datasets.
+* Based on wether the feature name contains the word "mean()" or "std()", selected columns of X were loaded from the training (7352 rows) and test (2947 rows) datasets. y and subject were fully loaded from the training and test datasets.
 
-*The training and test sets were combined for each data frame to form a big set (10299 rows) using cbind().
+* The training and test sets were combined for each data frame to form a big set (10299 rows) using cbind().
 
 ## Data Cleaning
 
